@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">User Management</h1>
+        <div id="userActions">
+            <button id="allUsersBtn" class="btn btn-success btn-block">Get All Users</button>
+            <div id="addUserForm" style="display: none;">
+                <h4>Add User</h4>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="addUserNameDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select Name
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="addUserNameDropdown">
+                        <a class="dropdown-item" href="#" data-value="John Doe">John Doe</a>
+                        <a class="dropdown-item" href="#" data-value="Jane Smith">Jane Smith</a>
+                        <!-- Add more dropdown items here -->
+                    </div>
+                    <input type="hidden" id="addUserName">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addUserAvatar">Avatar URL</label>
+                    <input type="text" class="form-control" id="addUserAvatar" required>
+                </div>
+                <button id="addUserSubmit" class="btn btn-success btn-block">Add User</button>
+            </div>
+            <!-- Other forms with dropdowns -->
+            <a href="remove.html" class="btn btn-danger btn-block mt-3">Go to Remove Page</a>
+            <a href="addUser.html" class="btn btn-warning btn-block mt-3">Go to Add Page</a>
+            <a href="getUser.html" class="btn btn-info btn-block mt-3">Go to User Info Page</a>
+            <a href="updateUser.html" class="btn btn-primary btn-block mt-3">Go to Update User Page</a>
+        </div>
+        <div id="result" class="mt-4">Results</div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
